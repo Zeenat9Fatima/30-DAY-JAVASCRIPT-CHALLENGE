@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="DAYTHREE.CSS">
+  <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSql0rPBBKETpg6Fzsi10IxWeuVow8gZDAUg&s">
+</head>
+<body>
+  <h1 style="text-decoration: underline solid lightgray; color: white;">DAY-3</h1>
+
+  <div id="scoreBoard">Score: 0</div>
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="controls">
+    <button onclick="restartGame()">NEW GAME</button>
+    <button onclick="togglePause()">PAUSE</button>
+    <button onclick="window.open('DAY 3.pdf', '_blank')">ABOUT</button>
+
+  </div>
+
+  <div id="gameOverScreen">
+    <div id="scoreText">Your Score: 0</div>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+
+  <script src="DAYTHREE.JS"></script>
+</body>
+</html>
