@@ -1,47 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>DAY 1: CALCULATOR</title>
-  <link rel="stylesheet" href="DAYONE.CSS">
-  <LINK rel="SHORTCUT ICON" href="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png">
-  
-</head>
-<body>
-<h1>DAY 1 </h1>
-<!-- ABOUT Button -->
-<div id="controls" >
-  <button onclick="window.open('DAY 1.pdf', '_blank')">ABOUT</button>
-</div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WORD SCRAMBLE GAME </title>
+    <link rel="stylesheet" href="DAYTWO.CSS">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9H36XNYQsofebjZ0S8A0mGDkckSR_ZIQcYw&s">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./JAVASCRIPT/WORD.JS" defer></script>
+    <script src="./JAVASCRIPT/DAYTWO.JS" defer></script>
+    </head>
+  <body>
+    <H1 style="text-align:center; margin-top: 20px;text-decoration: underline solid lightgray;">DAY 2</H1>
+    <div class="container">
+        <h2>Word Scramble</h2>
+        <div class="content">
+            <p class="word"></p>
+            <div class="details">
+                <p class="hint">Hint: <span></span></p>
+                <p class="time">Time Left: <span><b>30</b>s</span></p>
+            </div>
+            <input type="text" spellcheck="false" placeholder="Enter a valid word">
+            <div class="buttons">
+                <button class="refresh-word">Refresh Word</button>
+                <button class="check-word">Check Word</button>
+                <button class="about-btn" onclick="window.open('DAY 2.pdf', '_blank')">About</button>
 
-<div class="calculator">
-  <div class="display" id="display">0</div>
-  <div class="buttons">
-    <button class="function" onclick="clearDisplay()">AC</button>
-    <button class="function" onclick="toggleSign()">+/-</button>
-    <button class="function" onclick="appendValue('%')">%</button>
-    <button class="symbol" onclick="appendValue('/')">÷</button>
-
-    <button class="digit" onclick="appendValue('7')">7</button>
-    <button class="digit" onclick="appendValue('8')">8</button>
-    <button class="digit" onclick="appendValue('9')">9</button>
-    <button class="symbol" onclick="appendValue('*')">×</button>
-
-    <button class="digit" onclick="appendValue('4')">4</button>
-    <button class="digit" onclick="appendValue('5')">5</button>
-    <button class="digit" onclick="appendValue('6')">6</button>
-    <button class="symbol" onclick="appendValue('-')">−</button>
-
-    <button class="digit" onclick="appendValue('1')">1</button>
-    <button class="digit" onclick="appendValue('2')">2</button>
-    <button class="digit" onclick="appendValue('3')">3</button>
-    <button class="symbol" onclick="appendValue('+')">+</button>
-
-    <button class="digit wide" onclick="appendValue('0')">0</button>
-    <button class="digit" onclick="appendValue('.')">.</button>
-    <button class="symbol" onclick="calculate()">=</button>
-  </div>
-</div>
-<script src="DAYONE.JS"></script>
-</body>
+            </div>
+                        
+        </div>
+    </div>
+  </body>
 </html>
