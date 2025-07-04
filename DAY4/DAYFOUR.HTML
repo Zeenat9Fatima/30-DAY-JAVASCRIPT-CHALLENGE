@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To Do List</title>
+  <link rel="icon" href="https://www.shutterstock.com/image-vector/check-list-icon-vector-symbol-600nw-2477440299.jpg">
+  <link rel="stylesheet" href="DAYFOUR.CSS">
+  </head>
+<body>
+    <H1 >DAY 4</H1>
+  <div class="header">
+    <!-- REFER TO ABOUT TO UNDERSTAND-->
+    <svg width="400" height="150">
+      <path id="curve" d="M 0 140 C 0 0, 400 0, 400 140" fill="transparent" />
+      <text class="text" text-anchor="middle" font-size="48" font-weight="bold">
+        <textPath href="#curve" startOffset="50%">
+          MY TO DO LIST
+        </textPath>
+      </text>
+    </svg>
+  </div>
+
+  <div class="input-block">
+    <ul id="taskList" class="task-container"></ul>
+
+    <input type="text" id="taskInput" placeholder="Add a new task" />
+    <div class="button-group">
+      <button onclick="addTask()">Add</button>
+      <button onclick="resetTasks()">Reset All</button>
+      <button onclick="window.open('DAY 4.pdf', '_blank')">ABOUT</button><!-- TO OPEN THE PDF-->
+    </div>
+  </div>
+
+  <script src="DAYFOUR.JS">
+    
+  </script>
+</body>
+</html>

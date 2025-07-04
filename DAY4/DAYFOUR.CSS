@@ -1,0 +1,103 @@
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffdce7, #f9e1f0, #fbefff);
+    }
+h1{
+    text-decoration: underline solid white; 
+    text-align: center; 
+    color: white;
+    
+}
+    #curve {
+      fill: transparent;
+    }
+
+    .text {
+      font-size: 3rem;
+      font-weight: bold;
+      fill: #ff1493;
+      filter: drop-shadow(5px 5px 0 white);
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .input-block {
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 30px 20px;
+      border-radius: 30px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .task-container {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .task-container li {
+      background: #fff0f5;
+      border-radius: 40px;
+      margin: 10px 0;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .task-container input[type="checkbox"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ff1493;
+      border-radius: 50%;
+      margin-right: 15px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .task-container input[type="checkbox"]:checked::after {
+      content: '✓';
+      position: absolute;
+      top: -2px;
+      left: 4px;
+      color: #ff1493;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .input-block input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 2px solid #ff1493;
+      outline: none;
+      width: 80%;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .button-group button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ff1493;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .button-group button:hover {
+      background-color: #e0118b;
+    }
