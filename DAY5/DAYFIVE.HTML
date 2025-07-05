@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="DAYFIVE.CSS" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/14359/14359077.png">
+</head>
+<body>
+  <div class="header">
+    <h1>DAY 5</h1>
+  </div>
+
+  <div class="container">
+    
+    <div class="circle-container">
+      <svg class="progress-ring" width="320" height="320">
+        <circle class="ring-bg" r="130" cx="160" cy="160" />
+        <circle class="ring" r="130" cx="160" cy="160" />
+      </svg>
+      <div class="time" id="timer">25:00</div>
+    </div>
+
+    <div class="button-wrapper">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+      <button id="about" onclick="window.open('DAY 5.pdf', '_blank')">About</button>
+    </div>
+  </div>
+
+  <script src="DAYFIVE.JS"></script>
+</body>
+</html>

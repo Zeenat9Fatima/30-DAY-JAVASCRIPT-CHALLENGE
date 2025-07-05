@@ -1,0 +1,114 @@
+
+   body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:
+      linear-gradient(-45deg, rgba(15, 12, 41, 0.4), rgba(48, 43, 99, 0.4), rgba(36, 36, 62, 0.4), rgba(0, 0, 0, 0.4)),
+      url('https://t3.ftcdn.net/jpg/07/91/78/70/360_F_791787069_apESYMxYrWjGuwREn8rrxoHNYQiJB3Py.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .header h1 {
+    color: #fff;
+    text-decoration: underline solid lightgray;
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  
+   .circle-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 20px;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+  
+  .ring-bg {
+    fill: none;
+    stroke: rgba(41, 20, 225, 0.874);
+    stroke-width: 8;
+    stroke-dasharray: 565.48;
+  }
+  
+  .ring {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    stroke-dasharray: 565.48;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+  }
+  
+  .time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+   
+   .button-wrapper {
+    margin-top: 20px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  #start {
+    background-color: #07ae3c;
+  }
+  
+  #stop {
+    background-color: #d5220e;
+  }
+  
+  #reset {
+    background-color: orange;
+  }
+  #about{
+    background-color: rgb(13, 31, 228);
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  
