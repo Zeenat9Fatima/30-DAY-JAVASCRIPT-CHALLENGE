@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gallery {
+  perspective: 1000px;
+}
+
+.image-container {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.7s;
+}
+
+.image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  transition: transform 0.7s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper img {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+
+}
+
+/* Zoom on hover */
+.wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.btn {
+  background-color: darkorange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#about {
+  background-color:darkorange;
+  color:white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover,
+#about:hover {
+  filter: brightness(1.3);
+}
