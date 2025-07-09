@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipping Tracker</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5952/5952766.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="DAYEIGHT.CSS" />
+</head>
+<body>
+  <DIV class="HEADING"><H1>DAY 8</H1></DIV>
+  <div class="container">
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="steps">
+        <div class="step checked">
+          <div class="circle"><i class="fas fa-file-alt"></i></div>
+          <p>PROCESSING</p>
+        </div>
+        <div class="step">
+          <div class="circle"><i class="fas fa-box"></i></div>
+          <p>SHIPPED</p>
+        </div>
+        <div class="step">
+          <div class="circle"><i class="fas fa-truck-moving"></i></div>
+          <p>IN-TRANSIT</p>
+        </div>
+        <div class="step">
+          <div class="circle"><i class="fas fa-home"></i></div>
+          <p>DELIVERED</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn" id="prev" disabled><i class="fas fa-arrow-left"></i></button>
+      <button id="ABOUT" onclick="window.open('DAY 8.pdf', '_blank')">ABOUT</button><!-- TO OPEN THE PDF-->
+      <button class="btn" id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <script src="DAYEIGHT.JS"></script>
+</body>
+</html>

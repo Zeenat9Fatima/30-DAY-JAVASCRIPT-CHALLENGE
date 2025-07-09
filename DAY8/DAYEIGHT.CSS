@@ -1,0 +1,132 @@
+
+   body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .progress-container {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 40px 0 20px;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #ccc;
+    z-index: 1;
+  }
+  
+  .progress {
+    height: 4px;
+    background-color: green;
+    width: 0%;
+    transition: width 0.4s ease;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5%;
+  }
+  
+  .circle {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 4px solid lightgray;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lightgray;
+    font-size: 22px;
+    transition: all 0.3s ease;
+  }
+  
+  .step.checked .circle {
+    background-color: green;
+    color: white;
+    border-color: green;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+  }
+  
+  .step p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .step.checked p {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+    #ABOUT{
+    background-color: darkorange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ 
+  }
+   .HEADING {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .HEADING h1 {
+    color: black;
+    text-decoration: underline ;
+    margin: 0;
+    padding: 10px 0;
+  }
