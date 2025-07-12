@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="STYLE.CSS"/>
+  <link rel="icon" href="https://i.pinimg.com/736x/00/5f/16/005f165b9a70f650f13f9774bf39ca12.jpg">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="left-panel">
+        <div class="logo"><h1>14 PRINTS</h1></div>
+        <h2>Login using social media to get quick access</h2>
+        <button class="social-btn fb">Sign in with Facebook</button>
+        <button class="social-btn twitter">Sign in with Twitter</button>
+        <button class="social-btn google">Sign in with Google</button>
+      </div>
+      <div class="right-panel">
+        <h2>Login to your account</h2>
+        <p class="signup-text">Don’t have an account? <a href="#">Sign Up Free!</a></p>
+        <form>
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder=" " required />
+            <label for="email">Email address</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" name="password" placeholder=" " required />
+            <label for="password">Password</label>
+            <span id="togglePassword" class="toggle-icon">👁️</span>
+          </div>
+          <div class="options">
+            <label><input type="checkbox"/> Remember me</label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button type="submit" class="email-btn">Login with email</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="SCRIPT.JS"></script>
+</body>
+</html>

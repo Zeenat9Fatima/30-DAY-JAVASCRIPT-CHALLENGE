@@ -1,0 +1,186 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0c2c;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 850px;
+  }
+  
+  /* Main Login Box */
+  .login-box {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Left Panel */
+  .left-panel {
+    width: 55%;
+    padding: 40px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(rgba(160, 166, 241, 0.4), rgba(10, 12, 44, 0.4)),
+                url('LOGO.jpeg') no-repeat center center;
+    background-size: cover;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  .left-panel h1,
+  .left-panel h2 {
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /* Social Buttons */
+  .social-btn {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  .fb { background-color: #3b5998; }
+  .twitter { background-color: #1da1f2; }
+  .google { background-color: #db4437; }
+  
+  .social-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Right Panel */
+  .right-panel {
+    padding: 40px 30px;
+    width: 60%;
+    background-color: white;
+  }
+  
+  .right-panel h2 {
+    margin-bottom: 10px;
+    color: #0a0c2c;
+    font-weight: 700;
+  }
+  
+  .signup-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .signup-text a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    outline: none;
+  }
+  
+  .input-group label {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background-color: white;
+    padding: 0 5px;
+  }
+  
+  .input-group input:focus + label,
+  .input-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #007bff;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Options Row */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .options a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Submit Button */
+  .email-btn {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .email-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-box {
+      flex-direction: column;
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%;
+      padding: 30px;
+    }
+  }
+  
