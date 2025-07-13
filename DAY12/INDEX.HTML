@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="STYLE.CSS" />
+</head>
+<body>
+    <div class="toggle-wrapper">
+        <button id="toggleTheme" class="emoji-toggle">🌙</button>
+      </div>
+        
+  <div class="container">
+    <div class="age-container">
+      
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <div class="circle-box">
+          <p>COMPLETED</p>
+          <div class="progress" id="completed">--%</div>
+        </div>
+        <div class="circle-box">
+          <p>NEXT BIRTHDAY</p>
+          <div class="progress" id="next-birthday">-- days</div>
+        </div>
+      </div>
+
+      <!-- RIGHT STACK -->
+      <div class="right-stack">
+        
+        <!-- Black Circles -->
+        <div class="black-circles">
+          <div class="black-circle">
+            <span class="years">--</span>
+            <p>Years</p>
+          </div>
+          <div class="black-circle">
+            <span class="months">--</span>
+            <p>Months</p>
+          </div>
+          <div class="black-circle">
+            <span class="days">--</span>
+            <p>Days</p>
+          </div>
+        </div>
+
+        <!-- Input & Buttons -->
+        <div class="right-column">
+          <div class="input-group">
+            <input type="date" id="dob" />
+            <button onclick="calculateAge()">Calculate Age</button>
+          </div>
+
+          <div class="btn-group">
+            <button onclick="copyToClipboard()">Copy it</button>
+            <button onclick="window.print()">Print it</button>
+            <button class="about-btn" onclick="window.open('DAY 12.pdf', '_blank')">About</button>
+          </div>
+
+          <div class="result">
+            <p id="age-result">YOUR AGE IS: --</p>
+            <p id="age-months-result">YOUR AGE IN MONTH IS: --</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="SCRIPT.JS">  </script>
+</body>
+</html>
