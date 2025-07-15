@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analog Clock</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa1Q1WgWpD1xddX21Sh0lyPBqfYjkfgI_MRA&s">
+</head>
+<body>
+  <button id="darkModeToggle">🌙</button>
+
+  <div class="container">
+    <div class="clock">
+      <div class="ticks"></div>
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="center"></div>
+    </div>
+    <button onclick="setTime()">Set Your Time</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
