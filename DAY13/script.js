@@ -7,76 +7,91 @@ darkToggle.addEventListener('click', () => {
   darkToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
-// CLOCK LOGIC
+// CLOCK HANDS
 const hourHand = document.getElementById('hour');
 const minuteHand = document.getElementById('minute');
 const secondHand = document.getElementById('second');
 const clock = document.querySelector('.clock');
-const ticks = document.querySelector('.ticks');
+
+// SET TIME LOGIC
+let customTime = null;
+let customStart = null;
 
 function updateClock() {
-  const now = new Date();
-  const seconds = now.getSeconds();
-  const minutes = now.getMinutes();
+  let now = new Date();
+
+  if (customTime) {
+    const elapsed = Date.now() - customStart;
+    now = new Date(customTime.getTime() + elapsed);
+  }
+
   const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
 
-  const secondDeg = (seconds / 60) * 360;
-  const minuteDeg = (minutes / 60) * 360 + (seconds / 60) * 6;
   const hourDeg = ((hours % 12) / 12) * 360 + (minutes / 60) * 30;
+  const minuteDeg = (minutes / 60) * 360 + (seconds / 60) * 6;
+  const secondDeg = (seconds / 60) * 360;
 
-  secondHand.style.transform = `rotate(${secondDeg}deg)`;
-  minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
   hourHand.style.transform = `rotate(${hourDeg}deg)`;
+  minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+  secondHand.style.transform = `rotate(${secondDeg}deg)`;
 }
 
 setInterval(updateClock, 1000);
 updateClock();
 
-// SET CUSTOM TIME
-let customStart = null;
+// SET TIME BUTTON FUNCTIONALITY
+const setTimeBtn = document.getElementById("setTimeBtn");
 
 function setTime() {
-  let h = parseInt(prompt("Enter hour (0–23):", "3"));
-  let m = parseInt(prompt("Enter minute (0–59):", "0"));
-  let s = parseInt(prompt("Enter second (0–59):", "0"));
+  const input = prompt("Enter time in HH:MM:SS format (24-hour clock)", "14:30:00");
+
+  if (!input) return;
+
+  const parts = input.split(":");
+  if (parts.length !== 3) {
+    alert("Invalid format. Use HH:MM:SS.");
+    return;
+  }
+
+  const [h, m, s] = parts.map(Number);
 
   if (
     isNaN(h) || h < 0 || h > 23 ||
     isNaN(m) || m < 0 || m > 59 ||
     isNaN(s) || s < 0 || s > 59
   ) {
-    alert("Invalid time input!");
+    alert("Invalid time input. Please try again.");
     return;
   }
 
-  const base = new Date();
-  base.setHours(h, m, s, 0);
-  const diff = base - new Date();
+  const newTime = new Date();
+  newTime.setHours(h, m, s, 0);
 
-  customStart = Date.now() + diff;
+  customTime = newTime;
+  customStart = Date.now();
 }
 
-function getCustomDate() {
-  if (customStart) return new Date(customStart + Date.now() - customStart);
-  return new Date();
-}
+setTimeBtn.addEventListener("click", setTime);
 
-
-// ROMAN NUMERALS
+// ADD ROMAN NUMERALS TO CLOCK
 const romanNumerals = ['XII', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI'];
 
 for (let i = 0; i < 12; i++) {
-  const number = document.createElement('div');
-  number.className = 'number';
+  const numeral = document.createElement('div');
+  numeral.className = 'number';
 
-  const angle = (i * 30 - 90) * (Math.PI / 180); // Start from top
+  const angle = (i * 30 - 90) * (Math.PI / 180); // Start at top
   const radius = 120;
   const x = radius * Math.cos(angle);
   const y = radius * Math.sin(angle);
 
-  number.style.left = `calc(50% + ${x}px)`;
-  number.style.top = `calc(50% + ${y}px)`;
-  number.textContent = romanNumerals[i];
+  numeral.style.position = 'absolute';
+  numeral.style.left = `calc(50% + ${x}px)`;
+  numeral.style.top = `calc(50% + ${y}px)`;
+  numeral.style.transform = 'translate(-50%, -50%)';
+  numeral.textContent = romanNumerals[i];
 
-  clock.appendChild(number);
+  clock.appendChild(numeral);
 }
