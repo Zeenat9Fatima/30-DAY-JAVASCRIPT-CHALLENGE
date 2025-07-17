@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Mental Health Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <h1> Daily Mental Health Tracker</h1>
+    
+    <div class="inputs">
+      <div>
+        <label for="water">Water Intake (cups)</label>
+        <input type="number" id="water" min="0" />
+      </div>
+      <div>
+        <label for="exercise">Exercise (minutes)</label>
+        <input type="number" id="exercise" min="0" />
+      </div>
+      <div>
+        <label for="mood">Mood</label>
+        <input type="text" id="mood" readonly />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="submit">Add Entry</button>
+      <button id="updateEntry" style="display: none;">Update Entry</button>
+      <button id="cancelEdit" style="display: none;">Cancel</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Water (cups)</th>
+          <th>Exercise (min)</th>
+          <th>Mood</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="entryTable">
+        <!-- Entries will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+   <script src="script.js">
+    
+  </script>
+</body>
+</html>
