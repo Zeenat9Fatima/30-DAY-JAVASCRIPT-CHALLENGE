@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1870/1870080.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <h1 class="page-title">Resume Generator</h1>
+
+  <div class="container">
+    <aside class="sidebar">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="text" id="role" placeholder="Your Role (e.g. 3D Animator)" />
+
+      <section class="contact">
+        <input type="email" id="email" placeholder="Email" />
+        <input type="text" id="phone" placeholder="Phone" />
+        <input type="text" id="address" placeholder="Location" />
+        <input type="text" id="birth" placeholder="Date of Birth" />
+      </section>
+
+      <section class="skills">
+        <h4>Hard Skills (comma-separated)</h4>
+        <textarea id="skills" placeholder="E.g. Blender, ZBrush, Rigging"></textarea>
+        <h4>Soft Skills (comma-separated)</h4>
+        <textarea id="softSkills" placeholder="E.g. Time Management, Collaboration"></textarea>
+      </section>
+
+      <section class="languages">
+        <input type="text" id="lang1" placeholder="Language 1 with level" />
+        <input type="text" id="lang2" placeholder="Language 2 with level" />
+      </section>
+    </aside>
+
+    <main class="content">
+      <section class="about">
+        <h3>About</h3>
+        <textarea id="about" placeholder="Write a brief summary about yourself..."></textarea>
+      </section>
+
+      <section class="experiences">
+        <h3>Experience</h3>
+        <textarea id="exp" placeholder="Work experience, projects..."></textarea>
+      </section>
+
+      <section class="certificates">
+        <h3>Certificates</h3>
+        <textarea id="cert" placeholder="Courses or certificates..."></textarea>
+      </section>
+
+      <section class="education">
+        <h3>Education</h3>
+        <textarea id="education" placeholder="University, degree, timeline..."></textarea>
+      </section>
+    </main>
+  </div>
+  <div class="action-area">
+    <button id="generateBtn">Generate Resume</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+  
+
+  <div class="resume-wrapper" id="output" style="display: none;">
+    <div class="sidebar">
+      <section class="contact">
+        <i class="fas fa-envelope"></i><div id="emailOut"></div>
+        <i class="fas fa-phone"></i><div id="phoneOut"></div>
+        <i class="fas fa-location-dot"></i><div id="addressOut"></div>
+        <i class="fas fa-cake-candles"></i><div id="birthOut"></div>
+      </section>
+
+      <section class="skills">
+        <h3><i class="fas fa-screwdriver-wrench"></i> HARD SKILLS</h3>
+        <div id="skillsOut" class="pill-container"></div>
+      </section>
+
+      <section class="soft-skills">
+        <h3><i class="fas fa-brain"></i> SOFT SKILLS</h3>
+        <div id="softSkillsOut" class="pill-container"></div>
+      </section>
+
+      <section class="languages">
+        <h3><i class="fas fa-language"></i> LANGUAGES</h3>
+        <div id="lang1Out"></div>
+        <div id="lang2Out"></div>
+      </section>
+    </div>
+
+    <div class="main-content">
+      <header class="header">
+        <h2 id="nameOut">Your Name</h2>
+        <h4 id="roleOut">Your Role</h4>
+        <p id="aboutOut"></p>
+      </header>
+
+      <section>
+        <h3><i class="fas fa-briefcase"></i> WORK EXPERIENCE</h3>
+        <div id="expOut" class="text-block"></div>
+      </section>
+
+      <section>
+        <h3><i class="fas fa-certificate"></i> CERTIFICATES</h3>
+        <div id="certOut" class="text-block"></div>
+      </section>
+
+      <section>
+        <h3><i class="fas fa-graduation-cap"></i> EDUCATION</h3>
+        <div id="educationOut" class="text-block"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

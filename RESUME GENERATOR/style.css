@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  text-decoration: underline;
+  margin: 30px 0 20px;
+  color: darkblue;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 300px;
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h4 {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.sidebar input,
+.sidebar textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+}
+
+.sidebar textarea {
+  resize: vertical;
+  height: 60px;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.content h3 {
+  font-size: 18px;
+  color: darkblue;
+  margin-bottom: 5px;
+}
+
+.content textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 80px;
+  margin-bottom: 20px;
+}
+
+.action-area {
+  text-align: center;
+  margin: 30px 0;
+}
+
+button {
+  background-color: #052668;
+  color: white;
+  padding: 12px 30px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.resume-wrapper {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.resume-wrapper .sidebar {
+  width: 300px;
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
+}
+
+.resume-wrapper .sidebar h3 {
+  font-size: 16px;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid darkblue;
+  padding-bottom: 5px;
+}
+
+.resume-wrapper .sidebar i {
+  margin-right: 8px;
+  color: #00bcd4;
+}
+
+.resume-wrapper .sidebar section {
+  margin-bottom: 20px;
+}
+
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pill-container span {
+  background-color:darkblue;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+}
+
+.header h2 {
+  font-size: 28px;
+  color: darkblue;
+  margin-bottom: 5px;
+}
+
+.header h4 {
+  font-size: 18px;
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+.header p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.main-content section {
+  margin-top: 30px;
+}
+
+.main-content section h3 {
+  font-size: 18px;
+  color: darkblue;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-block {
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+  color: #1a1a1a;
+}
+.action-area button {
+  margin: 0 10px;
+}
